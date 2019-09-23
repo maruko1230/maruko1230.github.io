@@ -4,7 +4,7 @@ var urlsToCache = [
     '/maruko1230.github.io/',
 ];
 
-self.addEventListener('install', function(e) {
+self.addEventListener('install', function(event) {
     console.log('[ServiceWorker] Install');
 
     event.waitUntil(
@@ -20,7 +20,7 @@ self.addEventListener('activate', function(e) {
     console.log('[ServiceWorker] Activate');
 });
 
-self.addEventListener('fetch', function(e) {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches
             .match(event.request)
