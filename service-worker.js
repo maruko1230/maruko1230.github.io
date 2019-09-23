@@ -1,7 +1,10 @@
+'use strict';
+
 var CACHE_NAME = 'pwa-sample-caches';
 
 var urlsToCache = [
-    '/maruko1230.github.io/',
+    '/index.html',
+    '/p.html',
 ];
 
 self.addEventListener('install', function(event) {
@@ -16,7 +19,7 @@ self.addEventListener('install', function(event) {
     )
 });
 
-self.addEventListener('activate', function(e) {
+self.addEventListener('activate', function(event) {
     console.log('[ServiceWorker] Activate');
 });
 
